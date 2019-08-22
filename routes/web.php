@@ -11,18 +11,22 @@
 |
 */
 
-Route::get('/', function () {
 
-	$tasks = [
-		'Go to the store',
-		'Go to the market',
-		'Go to work'
-	];
+Route::get('/', 'PagesController@home');
 
-    // return view('welcome', ['tasks' => $tasks]);
-	return view('welcome')->withTasks($tasks);
 
-});
+// Route::get('/', function () {
+
+// 	$tasks = [
+// 		'Go to the store',
+// 		'Go to the market',
+// 		'Go to work'
+// 	];
+
+//     // return view('welcome', ['tasks' => $tasks]);
+// 	return view('welcome')->withTasks($tasks);
+
+// });
 
 
 

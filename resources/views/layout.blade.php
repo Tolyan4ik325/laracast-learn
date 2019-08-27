@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title', 'Laracast')</title>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 </head>
 <body>
 	
-    <ul>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/about">About us</a></li>
-    </ul>
-
-
-    @yield('content')
+     <div class="container">	
+			@yield('content')
+     </div>
 </body>
 </html>

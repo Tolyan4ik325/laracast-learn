@@ -39,6 +39,12 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/projects', 'ProjectController@index');
-Route::post('/projects', 'ProjectController@store');
-Route::get('/projects/create', 'ProjectController@create');
+Route::resource('projects', 'ProjectController');
+
+// Route::get('/projects', 'ProjectController@index');
+// Route::get('/projects/{project}', 'ProjectController@show');
+// Route::post('/projects', 'ProjectController@store');
+// Route::get('/projects/create', 'ProjectController@create');
+// Route::get('/projects/{project}/edit', 'ProjectController@edit');
+// Route::patch('/projects/{project}', 'ProjectController@update');
+// Route::delete('/projects/{project}', 'ProjectController@destroy');

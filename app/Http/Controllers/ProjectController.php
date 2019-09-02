@@ -22,14 +22,26 @@ class ProjectController extends Controller
     	return view('projects.create');
     }
 
+    public function show(Project $project ) {
+        // $project = Project::findOrFail($id);
+        return view('projects.show', compact('project'));
+    }
+
     public function store() {
 
-    	$project = new Project;
+    	// $project = new Project;
 
-    	$project->title = request('title');
-    	$project->description = request('description');
+    	// $project->title = request('title');
+    	// $project->description = request('description');
 
-    	$project->save();
+    	// $project->save();
+
+        // Project::create([
+        //     'title'=>request('title'),
+        //     'description'=>request('description')
+        // ]);
+
+        Project::create(request(['title', 'description']));
 
     	return redirect('/projects');
     }

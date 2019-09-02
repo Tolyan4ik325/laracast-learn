@@ -29,17 +29,11 @@ class ProjectController extends Controller
 
     public function store() {
 
-    	// $project = new Project;
 
-    	// $project->title = request('title');
-    	// $project->description = request('description');
-
-    	// $project->save();
-
-        // Project::create([
-        //     'title'=>request('title'),
-        //     'description'=>request('description')
-        // ]);
+        request()->validate([
+            'title' => ['required', 'min:3'],
+            'description' => 'required'
+        ]);
 
         Project::create(request(['title', 'description']));
 
